@@ -1,0 +1,13 @@
+parameters:
+    #Classes call
+    moovim.jwt_token.class:     MoovIm\UserBundle\Services\JWTToken
+    moovim.oauth_google.class:   MoovIm\UserBundle\Services\OAuthGoogle
+
+services:
+    jwt_token:
+        class: %moovim.jwt_token.class%
+        arguments: [@service_container, %user_token_secret%]
+
+    oauth_google:
+        class: %moovim.oauth_google.class%
+        arguments: [@request_stack, @service_container, @service.jwt_token, %oauth_access_token_url%, %oauth_people_api_url%, %google_client_id%, %google_client_secret%]

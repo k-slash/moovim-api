@@ -17,7 +17,13 @@
         "symfony/monolog-bundle": "~2.4",
         "sensio/distribution-bundle": "~3.0",
         "sensio/framework-extra-bundle": "~3.0",
-        "incenteev/composer-parameter-handler": "~2.0"
+        "incenteev/composer-parameter-handler": "~2.0",
+        "friendsofsymfony/rest-bundle": "1.3.*",
+        "guzzlehttp/guzzle": "~4.0",
+        "nelmio/cors-bundle": "~1.0",
+        "jms/serializer-bundle": "dev-master",
+        "jwmickey/php-jwt": "dev-master",
+        "stof/doctrine-extensions-bundle": "~1.1@dev"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
