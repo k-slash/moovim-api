@@ -70,3 +70,15 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+#TheMovieDB Configuration
+wtfz_tmdb:
+    api_key: 7791d5f3a7f5c0cfe266990cd57d31ad
+    cache:
+        enabled: true
+        #path: "%kernel.cache_dir%/tmdb"
+    log:
+        enabled: true
+        #path: "%kernel.logs_dir%/tmdb.log"
+    twig_extension:
+        enabled: false

@@ -23,7 +23,8 @@
         "nelmio/cors-bundle": "~1.0",
         "jms/serializer-bundle": "dev-master",
         "jwmickey/php-jwt": "dev-master",
-        "stof/doctrine-extensions-bundle": "~1.1@dev"
+        "stof/doctrine-extensions-bundle": "~1.1@dev",
+        "wtfzdotnet/wtfz-tmdb-bundle": "~1.2"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

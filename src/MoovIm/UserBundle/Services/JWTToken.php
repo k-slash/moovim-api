@@ -2,7 +2,7 @@
 
 // src/CRMBusinessApi/UserBundle/Services/JWTToken.php
 
-namespace CRMBusinessApi\UserBundle\Services;
+namespace MoovIm\UserBundle\Services;
 
 use JWT\Authentication\JWT;
 

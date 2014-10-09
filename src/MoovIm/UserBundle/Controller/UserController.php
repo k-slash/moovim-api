@@ -1,6 +1,6 @@
 <?php
 
-namespace CRMBusinessApi\UserBundle\Controller;
+namespace MoovIm\UserBundle\Controller;
 
 use FOS\RestBundle\Controller\FOSRestController;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -44,7 +44,6 @@ class UserController extends FOSRestController
             $jwtToken = $this->get('jwt_token');
             $token = explode(' ', $authorization)[1];
             $payload = $jwtToken->decode($token);
-
             $user  = $this->em->getRepository('MoovImUserBundle:User')->find($payload['sub']);
             if (!$user) {
                 return new JsonResponse([
@@ -55,7 +54,9 @@ class UserController extends FOSRestController
                 return new JsonResponse([
                     'user_id' => $user->getId(),
                     'email' => $user->getEmail(),
-                    'picture' => $user->getPicture,
+                    'first_name' => $user->getFirstName(),
+                    'family_name' => $user->getFamilyName(),
+                    'picture' => $user->getPicture(),
                 ]);
             }
         } else {

@@ -27,6 +27,8 @@ class AppKernel extends Kernel
             new Nelmio\CorsBundle\NelmioCorsBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new MoovIm\UserBundle\MoovImUserBundle(),
+            new Wtfz\TmdbBundle\WtfzTmdbBundle(),
+            new MoovIm\MovieBundle\MoovImMovieBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

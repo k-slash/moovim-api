@@ -1,7 +1,7 @@
 moov_im_user_connect:
     path:     /user/auth
-    defaults: { _controller: CRMBusinessApiUserBundle:User:connect }
+    defaults: { _controller: MoovImUserBundle:User:connect }
 
 moov_im_user_get_user_authenticated:
     path:     /user/me
-    defaults: { _controller: CRMBusinessApiUserBundle:User:getUserAuthenticated }
+    defaults: { _controller: MoovImUserBundle:User:getUserAuthenticated }

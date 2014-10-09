@@ -1,0 +1,3 @@
+moov_im_movies_coming_soon:
+    path:     /movie/soon
+    defaults: { _controller: MoovImMovieBundle:Movie:getMoviesComingSoon }

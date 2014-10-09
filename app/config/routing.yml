@@ -1,3 +1,7 @@
+moov_im_movie:
+    resource: "@MoovImMovieBundle/Resources/config/routing.yml"
+    prefix:   /
+
 moov_im_user:
     resource: "@MoovImUserBundle/Resources/config/routing.yml"
     prefix:   /

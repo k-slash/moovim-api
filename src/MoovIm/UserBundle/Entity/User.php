@@ -24,6 +24,20 @@ class User
     /**
      * @var string
      *
+     * @ORM\Column(name="first_name", type="string", length=255)
+     */
+    private $firstName;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="family_name", type="string", length=255)
+     */
+    private $familyName;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="email", type="string", length=255)
      */
     private $email;
@@ -120,5 +134,51 @@ class User
     public function getEmail()
     {
         return $this->email;
+    }
+
+    /**
+     * Set firstName
+     *
+     * @param string $firstName
+     * @return User
+     */
+    public function setFirstName($firstName)
+    {
+        $this->firstName = $firstName;
+
+        return $this;
+    }
+
+    /**
+     * Get firstName
+     *
+     * @return string 
+     */
+    public function getFirstName()
+    {
+        return $this->firstName;
+    }
+
+    /**
+     * Set familyName
+     *
+     * @param string $familyName
+     * @return User
+     */
+    public function setFamilyName($familyName)
+    {
+        $this->familyName = $familyName;
+
+        return $this;
+    }
+
+    /**
+     * Get familyName
+     *
+     * @return string 
+     */
+    public function getFamilyName()
+    {
+        return $this->familyName;
     }
 }
