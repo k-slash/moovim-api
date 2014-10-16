@@ -23,11 +23,20 @@ class MovieController extends FOSRestController
         return new JsonResponse($json);
     }
 
-    public function detailAction(Request $request){
-        $repository = $this->get('wtfz_tmdb.movie_repository');
-        $movie = $repository->load(87421);
-        var_dump($movie);
-        exit();
+    public function detailAction($id){
+        $client = $this->get('wtfz_tmdb.client');
+        $movie = $client->getMoviesApi()->getMovie($id);
+        $movie += $client->getMoviesApi()->getImages($id);
+        $movie += $client->getMoviesApi()->getVideos($id);
+        /*$a1 = json_decode( $movie, true );
+        $a2 = json_decode( $images, true );
+
+        $res = array_merge_recursive( $a1, $a2 );
+
+        $resJson = json_encode( $res );*/
+        //var_dump($movie);
+        //exit();
+        return new JsonResponse($movie);
         //$json = $client->getSearchApi()->searchMovies('Titanic');
         //var_dump($json);
     }
