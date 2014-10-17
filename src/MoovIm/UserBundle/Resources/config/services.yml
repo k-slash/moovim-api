@@ -4,9 +4,9 @@ parameters:
     moovim.oauth_google.class:   MoovIm\UserBundle\Services\OAuthGoogle
 
     #Variables
-    google_client_id: 1018703288165-svrbq2c31l94oh8luiontj9bg3j1jn06.apps.googleusercontent.com
+    google_client_id: 156876214982-l83kruqb9itgi2pr5f89nvdd3ednv2jo.apps.googleusercontent.com
     google_client_id_prod: 233892754495-lf20vqcl5fnlksp993gok44mqgnbg3e6.apps.googleusercontent.com
-    google_client_secret: x1Zyd8kMiLwoxo-5WaUXZs1y
+    google_client_secret: iqEa1FS-xwK-6qy0A1cUrjzZ
     google_client_secret_prod: PnCQR7tCcMp7WHRtdWGuketq
     oauth_access_token_url: https://accounts.google.com/o/oauth2/token
     oauth_people_api_url: https://www.googleapis.com/plus/v1/people/me/openIdConnect

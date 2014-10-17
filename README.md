@@ -26,9 +26,13 @@ Gulp is a streaming build system. It helps you to do repetitive tasks such as: m
 1. Install gulp: `sudo npm install -g gulp`
 2. Type: `gulp &` in the project directory before starting to develop
 
-### Upload directory
+### Authentication Google OAuth 2
 
-Create a directory called `content`.
+1. Create a new google project at: https://console.developers.google.com/project
+2. Go to APIs & auth -> Credentials, click Create new Client ID and enter the url of your website
+3. It will create a client id and a client secret
+4. Copy/paste this values to src/MoovIm/UserBundle/Resources/config/services.yml
+
 
 ### Database
 
