@@ -101,8 +101,6 @@ class OAuthGoogle
                 'client_secret' => $this->googleClientSecret,
             ];
 
-
-
             // Step 1. Exchange authorization code for access token.
             $accessTokenResponse = $this->client->post($this->oauthAccessTokenUrl, ['body' => $params]);
             $accessToken = $accessTokenResponse->json()['access_token'];
@@ -115,6 +113,7 @@ class OAuthGoogle
 
             // Step 3. Create or update user
             $profile = $profileResponse->json();
+
             $user  = $this->em->getRepository('MoovImUserBundle:User')->findOneByEmail($profile['email']);
             if (!$user) {
                 $user = new User();

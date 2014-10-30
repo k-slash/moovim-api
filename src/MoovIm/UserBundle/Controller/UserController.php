@@ -39,7 +39,6 @@ class UserController extends FOSRestController
     {
         $this->em = $this->getDoctrine()->getManager();
         $authorization = $request->headers->get('Authorization');
-
         if ($authorization) {
             $jwtToken = $this->get('jwt_token');
             $token = explode(' ', $authorization)[1];

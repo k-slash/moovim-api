@@ -7,6 +7,26 @@ Welcome to the back side of MoovIm website based on Symfony v2.5.
 
 Go to your project directory.
 
+## WARNING
+To install apache, php and mysql correctly, follow this link:
+http://coolestguidesontheplanet.com/get-apache-mysql-php-phpmyadmin-working-osx-10-10-yosemite/
+
+Add to your virtualhost this code:
+    RewriteEngine On
+    RewriteCond %{HTTP:Authorization} ^(.*)
+    RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
+Work in Virtualhost tag not in Directory tag
+For exemple, edit the file /etc/apache2/extra/httpd-vhosts.conf:
+<VirtualHost *:80>
+    DocumentRoot "/Users/victorkbidi/Sites/"
+    ServerName localhost
+    RewriteEngine On
+    RewriteCond %{HTTP:Authorization} ^(.*)
+    RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
+    ErrorLog "/private/var/log/apache2/k-slash.local-error_log"
+</VirtualHost>
+
+
 ## Quick start
 
 ### Composer
